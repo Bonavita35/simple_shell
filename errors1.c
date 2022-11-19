@@ -6,7 +6,6 @@
  * Return: 0 if no numbers in string, converted number otherwise
  *       -1 on error
  */
-
 int _erratoi(char *s)
 {
 	int i = 0;
@@ -36,7 +35,6 @@ int _erratoi(char *s)
  * Return: 0 if no numbers in string, converted number otherwise
  *        -1 on error
  */
-
 void print_error(info_t *info, char *estr)
 {
 	_eputs(info->fname);
@@ -55,7 +53,6 @@ void print_error(info_t *info, char *estr)
  *
  * Return: number of characters printed
  */
-
 int print_d(int input, int fd)
 {
 	int (*__putchar)(char) = _putchar;
@@ -96,7 +93,6 @@ int print_d(int input, int fd)
  *
  * Return: string
  */
-
 char *convert_number(long int num, int base, int flags)
 {
 	static char *array;
@@ -116,55 +112,29 @@ char *convert_number(long int num, int base, int flags)
 	*ptr = '\0';
 
 	do	{
-
 		*--ptr = array[n % base];
-
 		n /= base;
-
 	} while (n != 0);
 
-
-
 	if (sign)
-
 		*--ptr = sign;
-
 	return (ptr);
-
 }
 
-
-
 /**
-
  * remove_comments - function replaces first instance of '#' with '\0'
-
  * @buf: address of the string to modify
-
  *
-
  * Return: Always 0;
-
  */
-
 void remove_comments(char *buf)
-
 {
-
 	int i;
 
-
-
 	for (i = 0; buf[i] != '\0'; i++)
-
 		if (buf[i] == '#' && (!i || buf[i - 1] == ' '))
-
 		{
-
 			buf[i] = '\0';
-
 			break;
-
 		}
-
-}
+}

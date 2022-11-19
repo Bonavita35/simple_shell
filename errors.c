@@ -6,7 +6,6 @@
  *
  * Return: Nothing
  */
-
 void _eputs(char *str)
 {
 	int i = 0;
@@ -27,13 +26,12 @@ void _eputs(char *str)
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-
 int _eputchar(char c)
 {
 	static int i;
 	static char buf[WRITE_BUF_SIZE];
 
-	if (c == BUFFLUSH || i >= WRITE_BUF_SIZE)
+	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
 	{
 		write(2, buf, i);
 		i = 0;
@@ -51,7 +49,6 @@ int _eputchar(char c)
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-
 int _putfd(char c, int fd)
 {
 	static int i;
@@ -74,7 +71,6 @@ int _putfd(char c, int fd)
  *
  * Return: the number of chars put
  */
-
 int _putsfd(char *str, int fd)
 {
 	int i = 0;
@@ -86,4 +82,4 @@ int _putsfd(char *str, int fd)
 		i += _putfd(*str++, fd);
 	}
 	return (i);
-	]
+}

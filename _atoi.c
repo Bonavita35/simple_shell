@@ -6,22 +6,20 @@
  *
  * Return: 1 if interactive mode, 0 otherwise
  */
-
 int interactive(info_t *info)
 {
 	return (isatty(STDIN_FILENO) && info->readfd <= 2);
 }
+
 /**
  * is_delim - checks if character is a delimeter
  * @c: the char to check
  * @delim: the delimeter string
  * Return: 1 if true, 0 if false
  */
-
 int is_delim(char c, char *delim)
 {
 	while (*delim)
-
 		if (*delim++ == c)
 			return (1);
 	return (0);
@@ -66,9 +64,11 @@ int _atoi(char *s)
 		else if (flag == 1)
 			flag = 2;
 	}
+
 	if (sign == -1)
 		output = -result;
 	else
 		output = result;
+
 	return (output);
 }

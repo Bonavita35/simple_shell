@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "shell.h"
 
 /**
  * _myhistory - displays the history list, one command by line, preceded
@@ -7,7 +7,6 @@
  *        constant function prototype.
  *  Return: Always 0
  */
-
 int _myhistory(info_t *info)
 {
 	print_list(info->history);
@@ -21,7 +20,6 @@ int _myhistory(info_t *info)
  *
  * Return: Always 0 on success, 1 on error
  */
-
 int unset_alias(info_t *info, char *str)
 {
 	char *p, c;
@@ -45,12 +43,11 @@ int unset_alias(info_t *info, char *str)
  *
  * Return: Always 0 on success, 1 on error
  */
-
 int set_alias(info_t *info, char *str)
 {
 	char *p;
-	p = _strchr(str, '=');
 
+	p = _strchr(str, '=');
 	if (!p)
 		return (1);
 	if (!*++p)
@@ -66,7 +63,6 @@ int set_alias(info_t *info, char *str)
  *
  * Return: Always 0 on success, 1 on error
  */
-
 int print_alias(list_t *node)
 {
 	char *p = NULL, *a = NULL;
@@ -80,7 +76,6 @@ int print_alias(list_t *node)
 		_puts(p + 1);
 		_puts("'\n");
 		return (0);
-
 	}
 	return (1);
 }
@@ -91,12 +86,10 @@ int print_alias(list_t *node)
  *          constant function prototype.
  *  Return: Always 0
  */
-
 int _myalias(info_t *info)
 {
 	int i = 0;
 	char *p = NULL;
-
 	list_t *node = NULL;
 
 	if (info->argc == 1)
@@ -117,5 +110,6 @@ int _myalias(info_t *info)
 		else
 			print_alias(node_starts_with(info->alias, info->argv[i], '='));
 	}
+
 	return (0);
 }
