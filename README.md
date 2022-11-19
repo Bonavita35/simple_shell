@@ -44,5 +44,5 @@ Our shell has support for the following built-in commands:
 
 
 ### Authors
- Edward Ezeabasili: [GitHub](https://github.com/Bonavita35], [Twitter](https://twitter.com/experditus)
+ Edward Ezeabasili: [GitHub](https://github.com/Bonavita35), [Twitter](https://twitter.com/experditus);
  Augustine Ikenwa: [GitHub](https://github.com/ikenwaa), [Twitter](https://twitter.com/im_ikenwa).
